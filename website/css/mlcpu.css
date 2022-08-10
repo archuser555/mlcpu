@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: #3f2f2f;
+
+    --web-background: #fafafa;
+    --web-borderlineColor: rgb(0, 0, 0, 0.4);
+}
+
+header,footer,#Content {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header,footer{
+    border: 0 solid var(--web-borderlineColor);
+    border-bottom-width: 1px;
+}
+
+header > div {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: .8em;
+}
+
+header > div > section {
+    width: 100%;
+    transform: translateY(10px);
+}
+
+header {
+    padding: 8px 0;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#mlcpu-t{
+    font-size: 2em;
+}
+
+#mlcpu-p {
+    font-size: 1em;
+}
+
+#mlcpu-i {
+    opacity: .6;
+    max-height: 90px;
+    max-width: 90px;
+
+    width: 100vh;
+    height: 100vh;
+    transform: translateY(-5px);
+
+}
+
+body {
+    background-color: var(--web-background);
+}
+
+#Content {
+    padding: 6px 8px;
+    color: #3f2f2f;
+}
+
+footer {
+    font-size: clamp(8px, 0.8vw, 12px);
+    color: rgb(0, 0, 0, 0.6);
+    font-weight: bold;
+
+    display: flex;
+    justify-content: left;
+    border-top-width: 1px;
+    border-bottom-width:0px;
+}
+
+footer > span {
+    display: flex;
+    align-items: center;
+    
+    margin: 3px 4px
+}
+
+footer > span > img {
+    margin: 0 2px;
+    width: 1.8%;
+}
+
+/* buttons */
+
+#buttons {
+    display: flex;    
+    width: 100%;
+    justify-content: right;
+}
+
+.gbtn {
+    background-color: #ececec;
+    font-size: clamp(6px, 0.8em 16px);
+
+    padding: 6px 16px;
+    border: 1px solid rgb(31, 31, 42, 0.5);
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    margin: 8px;
+    padding: 4px 8px;
+}
+
+.gbtn:hover {
+    background-color: #acacac;
+    color: white;
+}
+
+.gbtn > img {
+    /* position: absolute; */
+    
+    width: 100%;
+    height: 100%;
+
+    max-width: 16px;
+    max-height: 16px;
+
+    margin-right: 8px;
+}
+
+
+
+@media screen and (max-width:300px){
+    header > div {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #mlcpu-i {
+        margin: 0;
+    }
+
+    #buttons {
+        display: block;
+    }
+
+    header > div > section {
+        transform: none
+    }
+}
